@@ -1,3 +1,8 @@
+from . import main
+from ..models import  Blog,user
+from app.requests import get_quotes
+from flask import render_template,request,redirect,url_for,abort,flash
+
 @main.route('/')
 def index():
     health = Blog.query.filter_by(category = 'Health').all()
