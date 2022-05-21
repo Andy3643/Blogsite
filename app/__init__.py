@@ -1,0 +1,1 @@
+postgresql+psycopg2://moringa:pass123@localhost/studentportal
