@@ -1,0 +1,21 @@
+{% extends 'main/base.html'%}
+{% import 'bootstrap/wtf.html' as wtf%}
+
+
+
+{% block content %}
+<div class="container" >
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{{url_for('static', filename='')}}" /> 
+        </div>
+        <div class="col-md-6 "id="login">
+            
+            <!-- register form -->
+            {{wtf.quick_form(login_form)}}
+            <p>Already have an account? <a href="">Log In</a></p>
+        </div>
+    </div>
+</div>
+{% endblock%}
+
