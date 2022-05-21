@@ -5,3 +5,11 @@ export MAIL_PASSWORD='Get#yourinfo'
 
 
 python3 manage.py server
+
+
+
+
+
+
+python3.9 manage.py db migrate -m ""
+python3.9 manage.py db upgrade
