@@ -27,7 +27,7 @@ class User(UserMixin,db.Model):
     def verify_password(self,password):
         return check_password_hash(self.pass_secure,password)
     
-    def save_u(self):
+    def save_user(self):
         db.session.add(self)
         db.session.commit()
 
@@ -52,7 +52,7 @@ class Blog(db.Model):
     category = db.Column(db.String(255), index = True,nullable = False)
     comment = db.relationship('Comment',backref='blog',lazy='dynamic')
 
-    def save_p(self):
+    def save_blog(self):
         db.session.add(self)
         db.session.commit()
 
@@ -66,7 +66,7 @@ class Comment(db.Model):
     comment = db.Column(db.Text(),nullable = False)
     blog_id = db.Column(db.Integer,db.ForeignKey('blogs.id'),nullable = False)
     
-    def save_c(self):
+    def save_comment(self):
         db.session.add(self)
         db.session.commit()
 
