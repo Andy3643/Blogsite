@@ -2,7 +2,7 @@ import os
 class Config:
 
     SECRET_KEY = 'secretkey1'
-    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://moringa:pass123@localhost/studentportal'
+    SQLALCHEMY_DATABASE_URI='postgresql+psycopg2://moringa:pass123@localhost/personalblog'
     SQLALCHEMY_TRACK_MODIFICATIONS= False
    
     

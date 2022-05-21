@@ -1,9 +1,7 @@
 
 from flask import Flask
 from flask_bootstrap import Bootstrap
-
 from flask_sqlalchemy import SQLAlchemy
-
 from config import config_options
 from flask_uploads import UploadSet,configure_uploads,IMAGES
 from flask_login import LoginManager
@@ -27,7 +25,7 @@ def create_app(config_name):
 
     # Creating the app configurations
     app.config.from_object(config_options[config_name])
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://moringa:pass123@localhost/studentportal'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://moringa:pass123@localhost/personalblog'
 
     # Initializing flask extensions
     bootstrap.init_app(app)
